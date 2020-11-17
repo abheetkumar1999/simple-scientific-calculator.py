@@ -22,8 +22,8 @@ result_label.grid(row=10,columnspan=4, sticky=W+E)
 equation = StringVar() 
 
 def addition():
-    first=int(first_field.get())
-    second=int(second_field.get())
+    first=int(eval(first_field.get()))
+    second=int(eval(second_field.get()))
     result=first+second
     result_label.config(text="" +str(result)).grid(row=10,columnspan=4, sticky=W+E)
 addition_button=tk.Button(mainWindow,text="+",fg='black', bg='light grey',command=lambda:addition(),height=2, width=7) 
@@ -32,8 +32,8 @@ addition_button.grid(row=5, column=0,ipadx=40)
 
 
 def minus():
-    first=int(first_field.get())
-    second=int(second_field.get())
+    first=int(eval(first_field.get()))
+    second=int(eval(second_field.get()))
     result=first-second
     result_label.config(text="" +str(result))
 minus_button=tk.Button(mainWindow,text="-", fg='black', bg='light grey', command=lambda:minus(),height=2, width=7)
@@ -41,8 +41,8 @@ minus_button.grid(row=5, column=1,ipadx=40)
 
 
 def multiply():
-    first=int(first_field.get())
-    second=int(second_field.get())
+    first=int(eval(first_field.get()))
+    second=int(eval(second_field.get()))
     result=first*second
     result_label.config(text="" +str(result))
 mul_button=tk.Button(mainWindow,text="*", fg='black', bg='light grey',command=lambda:multiply(),height=2, width=7)
@@ -50,8 +50,8 @@ mul_button.grid(row=5, column=2,ipadx=40)
 
 
 def divide():
-    first=int(first_field.get())
-    second=int(second_field.get())
+    first=int(eval(first_field.get()))
+    second=int(eval(second_field.get()))
     result=first/second
     result_label.config(text="" +str(result))
 divide_button=tk.Button(mainWindow,text="/", fg='black', bg='light grey',command=lambda:divide(),height=2, width=7)
